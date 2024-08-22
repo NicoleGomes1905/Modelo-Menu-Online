@@ -1,0 +1,252 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+body {
+  font-family: 'Roboto Serif', serif;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4e8d5; 
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+/* HEADER */
+header {
+  padding: 32px 0;
+  text-align: center;
+}
+
+header, div {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin-bottom: 4px;
+}
+
+header h1 span {
+  color: #995000;
+}
+
+/* DIV */
+div {
+  margin-bottom: 24px;
+}
+
+div h2 {
+  background-color: #FED7AA;
+  text-align: center;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+ul li {
+  margin-bottom: 16px;
+}
+
+li .item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+li .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+li .details h3 {
+  font-size: 16px;
+}
+
+.price {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.description-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.description {
+  color: #2D2C2A;
+  margin-right: 16px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity button {
+  background-color: #995000;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.quantity .quantity-display {
+  margin: 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* "Add to Order" Button */
+.addToOrder {
+  background-color: #995000;
+  color: #fff;
+  border: none;
+  font-family: 'Roboto Serif', serif;
+  font-size: 16px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+/* MODAL */
+
+.addToOrderFinal {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #995000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Roboto Serif', serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.addToOrderFinal:hover {
+  background-color: #e07b00;
+  transform: translateX(-50%) scale(1.05);
+}
+
+.removeFromOrder {
+  background-color: #995000;
+  color: #fff;
+  border: none;
+  font-family: 'Roboto Serif', serif;
+  font-size: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.removeFromOrder:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
+
+.finishOrder {
+  background-color: #995000;
+  color: #fff;
+  border: none;
+  font-family: 'Roboto Serif', serif;
+  font-size: 16px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.finishOrder:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FED7AA;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.modal-content h2 {
+  position: relative;
+  top: 13px; 
+}
+
+.modal-content li {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.finishOrder {
+  align-self: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#openOrderButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b7791f;
+  color: white;
+  font-family: 'Roboto Serif', serif;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#openOrderButton:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
